@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('livros-container');
 
     // Faz a chamada à API para buscar os livros (com paginação, pegando a primeira página)
-    fetch('/api/livros?page=0&size=10')
+    fetch('/api/livros?page=0&size=1000')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Falha ao buscar os dados da API');
