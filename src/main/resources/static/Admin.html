@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>Painel de Administração</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/admin.html">Admin Dashboard</a>
+    </nav>
+</header>
+<main>
+    <h2>Análise de Dados da Biblioteca</h2>
+    <div class="dashboard">
+        <div id="grafico-idiomas" class="chart-container"></div>
+        <div id="grafico-classificacao" class="chart-container"></div>
+    </div>
+</main>
+
+<!-- Inclusão do Highcharts a partir de um CDN -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
