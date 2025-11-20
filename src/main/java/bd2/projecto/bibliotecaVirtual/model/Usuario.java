@@ -33,4 +33,7 @@ public class Usuario {
 
     @OneToMany(mappedBy = "usuario")
     private Set<Reserva> reservas = new HashSet<>();
+    
+    @OneToMany(mappedBy = "usuario")
+    private Set<Comentario> comentarios = new HashSet<>();
 }

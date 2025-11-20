@@ -3,7 +3,6 @@ package bd2.projecto.bibliotecaVirtual.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,8 +13,9 @@ import java.util.Set;
 @Setter
 public class Livro {
     @Id
+    @Column(name = "id_livro")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_livro;
+    private Integer idlivro;
 
     private String nome;
     private String isbn;
@@ -56,4 +56,7 @@ public class Livro {
 
     @OneToMany(mappedBy = "livro")
     private Set<Exemplar> exemplares = new HashSet<>();
+
+    @OneToMany(mappedBy = "livro")
+    private Set<Comentario> comentarios = new HashSet<>();
 }

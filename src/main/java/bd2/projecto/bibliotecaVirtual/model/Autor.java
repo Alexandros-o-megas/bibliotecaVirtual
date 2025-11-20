@@ -27,4 +27,7 @@ public class Autor {
     
     @ManyToMany(mappedBy = "autores")
     private Set<Livro> livros = new HashSet<>();
+    
+    @OneToMany(mappedBy = "autor")
+    private Set<Comentario> comentarios = new HashSet<>();
 }

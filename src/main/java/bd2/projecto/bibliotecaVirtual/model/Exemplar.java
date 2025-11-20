@@ -3,7 +3,6 @@ package bd2.projecto.bibliotecaVirtual.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -29,4 +28,7 @@ public class Exemplar {
     
     @OneToMany(mappedBy = "exemplar")
     private Set<Emprestimo> emprestimos = new HashSet<>();
+    
+    @OneToMany(mappedBy = "exemplar")
+    private Set<Reserva> reservas = new HashSet<>();
 }
